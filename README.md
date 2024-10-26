@@ -1,2 +1,2 @@
 # uptimer
-Computer usage timer.
+A timer that tracks computer usage / your uptime.
