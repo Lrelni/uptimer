@@ -7,7 +7,7 @@ import datetime
 root = tk.Tk()
 root.title('Uptimer')
 w=280
-h=200
+h=220
 root.resizable(width=False, height=False)
 ws = root.winfo_screenwidth() - w
 hs = root.winfo_screenheight()
@@ -50,8 +50,14 @@ btn.pack()
 lbl2 = tk.Label(f, background="grey", foreground="white", text="What am I doing?")
 lbl2.pack()
 
-txt = tk.Text(f, height=10)
+txt = tk.Text(f, height=4)
 
 txt.pack(anchor="s")
+
+def clear_text():
+    txt.delete(1.0, tk.END)
+    
+btn2 = ttk.Button(f, text="Clear", command=clear_text)
+btn2.pack()
 
 tk.mainloop()
